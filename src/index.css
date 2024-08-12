@@ -4,3 +4,18 @@
 *{
   color: black;
 }
+
+.chatsize{
+  margin: 1% 0%;
+ height: 87vh;
+ border-radius: 10px;
+ overflow: hidden;
+ 
+ /* padding: 20px 0px; */
+}
+
+
+.freinds-on-chat::-webkit-scrollbar{
+ display: none;
+
+}

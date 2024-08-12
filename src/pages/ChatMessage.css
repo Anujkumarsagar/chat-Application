@@ -1,0 +1,79 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  clear: both;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.message-sent {
+
+  flex-flow: nowrap;
+  background-color: #dcf8c6;
+  display: flex;
+  float: inline-end;
+  flex-direction: column;
+  max-width: 66%;
+  overflow-wrap: anywhere;
+}
+
+.message-received {
+  align-self: flex-start;
+  background-color: #fff;
+  display: flex;
+  float: inline-start;
+  flex-direction: column;
+  max-width: 66%;
+  overflow-wrap: anywhere;
+}
+
+.user-id {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input-container input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.input-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}

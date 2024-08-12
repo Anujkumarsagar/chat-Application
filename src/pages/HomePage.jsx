@@ -1,7 +1,14 @@
 import React from 'react';
 import UserProfileCard from '../components/ChatMessage/UserProfileCard/UserProfileCard';
-
+import authService from '../../appwrite/auth';
+// import result from '../../appwrite/setup';
+// import chatService from "../../appwrite/config";
 function HomePage() {
+
+  // const users = authService.getAllLogedInUser();
+  // console.log(result)
+  const userData =  authService.getCurrentUser();
+  console.log(userData)
   return (
     <div className="flex ">
       {/* Sidebar */}
@@ -10,7 +17,7 @@ function HomePage() {
           <img className="h-12 w-12 rounded-full" src="profile-pic.jpg" alt="User profile picture" />
           <span className="text-lg font-bold">User Name</span>
         </div>
-        <nav className="space-y-2 hidden">
+        <nav className="space-y-2 ">
           <a href="#" className="block p-2 rounded hover:bg-gray-700">MEMES</a>
           <a href="#" className="block p-2 rounded hover:bg-gray-700">HOME</a>
           <a href="#" className="block p-2 rounded hover:bg-gray-700">CHAT</a>
@@ -20,7 +27,7 @@ function HomePage() {
         </nav>
       </div>
       <div className='w-1/4 '>
-      <div className="profile">
+      <div className="profile h-4/5  overflow-y-scroll">
       <UserProfileCard/>
       <UserProfileCard/>
       </div>
@@ -36,7 +43,7 @@ function HomePage() {
               <p className="text-gray-600">System announcements and news</p>
             </div>
             <div className="flex space-x-2">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Join</button>
+              <button className="text-white bg-black px-5 py-2 rounded-lg font-bold  lg:inline-block  shadow-md shadow-slate-600">Join</button>
               <button className="text-gray-500 hover:text-gray-700">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -52,12 +59,9 @@ function HomePage() {
               <p className="text-gray-600">Private messages only</p>
             </div>
             <div className="flex space-x-2">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Open</button>
+              <button className="text-white bg-black px-5 py-2 rounded-lg font-bold  lg:inline-block  shadow-md shadow-slate-600">Open</button>
               <button className="text-gray-500 hover:text-gray-700 relative">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">3</span>
+               
               </button>
             </div>
           </div>
